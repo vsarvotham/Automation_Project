@@ -45,5 +45,7 @@ then
     #do nothing
 else
     echo "$cronFile has not been found"
-    echo "* * * * * root /root/Automation_Project/automation.sh" >> cronFile
+    cd /etc/cron.d/
+    sudo touch /etc/cron.d/automation
+    sudo echo "* * * * * root /root/Automation_Project/automation.sh" >> cronFile
 fi
